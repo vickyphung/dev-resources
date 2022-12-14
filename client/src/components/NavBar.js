@@ -6,9 +6,10 @@ export default function NavBar(props) {
 
 
       <div className="nav">
+
+      <Link to="/">Home</Link>
         <Link to="/auth">Sign Up/Log In </Link>
-        <Link to="/">About/Contact</Link>
-        {/* <Link to="/auth">Sign Up/Log In </Link> */}
+        <Link to="/about">About/Contact</Link>
         
         
         
@@ -20,7 +21,7 @@ export default function NavBar(props) {
         <Link to="/dsalgo">Data Structures & Algorithms</Link>
         <Link to="/freecourses">Free Online Courses</Link>
         <Link to="/git">Git</Link>
-        <Link to="/hosting">Hosting</Link>
+        <Link to="/hosting">Web Hosting</Link>
         <Link to="/htmlcss">HTML & CSS</Link>
         <Link to="/js">JavaScript</Link>
         <Link to="/mongo">Mongo</Link>
@@ -30,6 +31,7 @@ export default function NavBar(props) {
         <Link to="/sandbox">Sandbox</Link>
         <Link to="/tools">Tools</Link>
         <Link to="/webdev">Web Development</Link>
+        <Link to="/youtube">YouTube</Link>
 
       </div>
 

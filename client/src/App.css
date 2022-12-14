@@ -5,3 +5,8 @@
 .flex {
   display: flex;
   }
+
+
+h2 {
+  text-decoration: underline;
+  }

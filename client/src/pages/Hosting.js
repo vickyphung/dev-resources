@@ -24,7 +24,7 @@ const Hosting = () => {
   const loaded = () => {
     return (
       <div className="container">
-        <h2>Hosting</h2>
+        <h2> Web Hosting</h2>
         <div className="siteList">
           {bookmarks?.map((bookmark, index) => (
             <div className="site">

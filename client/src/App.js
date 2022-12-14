@@ -5,6 +5,7 @@ import { getUser } from "./utilities/users-service";
 import Auth from "./pages/Auth";
 import NavBar from "./components/NavBar";
 import AddBookmarkForm from "./components/AddBookmarkForm";
+import Home from "./pages/Home";
 import Bookmarks from "./pages/Bookmarks";
 import Htmlcss from "./pages/Htmlcss";
 import Articles from "./pages/Articles";
@@ -23,6 +24,7 @@ import Other from "./pages/Other";
 import Reactjs from "./pages/React";
 import Logout from "./components/Logout";
 import NavBarLogin from "./components/NavBarLogin";
+import Youtube from "./pages/Youtube";
 
 function App() {
   const [user, setUser] = useState(getUser());
@@ -40,6 +42,7 @@ function App() {
 
             <div>
               <Routes>
+              <Route path="/auth" element={<Home />} />
               <Route path="/logout" element={<Logout />} />
 
 
@@ -59,6 +62,7 @@ function App() {
                 <Route path="/git" element={<Git />} />
                 <Route path="/other" element={<Other />} />
                 <Route path="/mongo" element={<Mongo />} />
+                <Route path="/youtube" element={<Youtube />} />
               </Routes>
             </div>
           </div>
@@ -71,9 +75,10 @@ function App() {
             <div>
               <NavBar />
             </div>
+            
             <Routes>
           <Route path="/auth" element={<Auth setUser={setUser} />} />
-
+          <Route path="/" element={<Bookmarks />} />
 
               <Route path="/bookmarks" element={<Bookmarks />} />
               <Route path="/htmlcss" element={<Htmlcss />} />
@@ -91,6 +96,7 @@ function App() {
               <Route path="/git" element={<Git />} />
               <Route path="/other" element={<Other />} />
               <Route path="/mongo" element={<Mongo />} />
+              <Route path="/youtube" element={<Youtube />} />
             </Routes>
           </div>
         </>
