@@ -46,7 +46,12 @@ router.post("/add", (req, res) =>{
 })
   
 router.get("/category/:category", (req, res)=>{
-    bookmark.find({category: req.params.category}, (err, bookmark)=>{
+    const category = req.params.category
+    bookmark.find()
+    .where('category').equals(category)  
+    .sort('site')
+    .exec
+    ((err, bookmark)=>{
         if(err){
             res.status(404).json({message: "Could not find bookmarks with that category."})
         } else {
