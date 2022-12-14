@@ -51,7 +51,7 @@ export default function LogInForm (props) {
             onChange={handleChange}
             required
           />
-          <button type="submit">SIGN UP!</button>
+          <button type="submit">Log In</button>
         </form>
         <p className="error-message">{errorState}</p>
       </div>

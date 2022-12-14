@@ -16,7 +16,7 @@ const Hosting = () => {
       console.error(e);
     }
   };
- 
+
   useEffect(() => {
     getBookmarks();
   }, []);
@@ -38,7 +38,7 @@ const Hosting = () => {
   };
 
   const loading = () => {
-    return <h1>Loading...</h1>;
+    return <h2>Loading...</h2>;
   };
 
   return (

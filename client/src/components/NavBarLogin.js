@@ -1,23 +1,34 @@
 import { Link } from "react-router-dom";
 import "./styles.css";
-export default function NavBar(props) {
+export default function NavBarLogin(props) {
   return (
     <nav>
+      <h2>{props?.user?.name}</h2>
+      <button
+        onClick={() => {
+          localStorage.removeItem("token");
+          props.setUser(null);
+        }}
+      >
+        Log Out
+      </button>
 
 
       <div className="nav">
-        <Link to="/auth">Sign Up/Log In </Link>
-        <Link to="/">About/Contact</Link>
-        {/* <Link to="/auth">Sign Up/Log In </Link> */}
-        
-        
-        
-        <br /><Link to="/bookmarks">All Bookmarks</Link>
+
+
+
+
+      <br />
+      
+      <Link to="/">About/Contact</Link>
+      <Link to="/bookmarks">All Bookmarks</Link>
+
         <h3>Categories</h3>
 
         <Link to="/articles">Articles</Link>
         <Link to="/design">Design</Link>
-        <Link to="/dsalgo">Data Structures & Algorithms</Link>
+        <Link to="/dsalgo">Data Structures and Algorithms</Link>
         <Link to="/freecourses">Free Online Courses</Link>
         <Link to="/git">Git</Link>
         <Link to="/hosting">Hosting</Link>
@@ -30,6 +41,9 @@ export default function NavBar(props) {
         <Link to="/sandbox">Sandbox</Link>
         <Link to="/tools">Tools</Link>
         <Link to="/webdev">Web Development</Link>
+
+
+
 
       </div>
 

@@ -47,11 +47,11 @@ const AddBookmarkForm = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="site">Site:</label>
+        <label htmlFor="site">Site:</label><br />
         <input type="text" name="site" onChange={handleChange} value={formData.site} /><br/>
-        <label htmlFor="url">URL:</label>
+        <label htmlFor="url">URL:</label><br />
         <input type="text" name="url" onChange={handleChange} value={formData.url} /><br/>
-        <label htmlFor="category">Category:</label>
+        <label htmlFor="category">Category:</label><br />
         <input type="text" name="category" onChange={handleChange} value={formData.category} /><br/>
         <input className="submitButton" type="submit" />
       </form>

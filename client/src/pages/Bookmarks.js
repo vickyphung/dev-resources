@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import AddBookmarkForm from '../components/AddBookmarkForm'
+
 
 const Bookmarks = () => {
 
@@ -52,14 +52,15 @@ const Bookmarks = () => {
 
   // Function for when data doesn't exist
   const loading = () => {
-    return <h1>Loading...</h1>;
+    return <h2>Loading...</h2>;
   };
 
   return (
     <div>
-      <AddBookmarkForm />
+
       {console.log(bookmarks)}
 
+<h2>All Bookmarks</h2>
 
       {bookmarks ? loaded() : loading()}
 
