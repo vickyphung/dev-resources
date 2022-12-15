@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 
 const Htmlcss = () => {
-  const url = `http://localhost:3001/bookmarks/category/HTML%20CSS`;
+  const url = `http://localhost:3001/bookmarks/category/css`;
   const [bookmarks, setBookmarks] = useState("");
 
   const getBookmarks = async () => {
@@ -24,7 +24,7 @@ const Htmlcss = () => {
   const loaded = () => {
     return (
       <div className="container">
-        <h2>HTML and CSS</h2>
+        <h2>CSS</h2>
         <div className="siteList">
           {bookmarks?.map((bookmark, index) => (
             <div className="site">

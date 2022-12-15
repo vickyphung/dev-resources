@@ -52,7 +52,35 @@ const AddBookmarkForm = () => {
         <label htmlFor="url">URL:</label><br />
         <input type="text" name="url" onChange={handleChange} value={formData.url} /><br/>
         <label htmlFor="category">Category:</label><br />
-        <input type="text" name="category" onChange={handleChange} value={formData.category} /><br/>
+
+        <select className='searchDropdown' id="type" name="category" onChange={handleChange} value={formData.category}>
+              <option value="css" >CSS</option>
+              <option value="design" >Design</option>
+              <option value="data structures and algorithms" >Data Structures and Algorithms</option>
+              <option value="free online courses" >Free Online Courses</option>
+              <option value="git" >Git</option>
+              <option value="hosting" >Web Hosting</option>
+              <option value="html" >HTML</option>
+              <option value="JavaScript" >JavaScript</option>
+              <option value="mongo" >MongoDB</option>
+              <option value="node" >Node</option>
+              <option value="other" >Other</option>
+              <option value="playground" >Playground</option>
+              <option value="podcasts" >Podcasts</option>
+              <option value="react" >React</option>
+              <option value="tools" >Tools</option>
+              <option value="web development" >Web Development</option>
+              <option value="youtube" >YouTube</option>
+
+              <option value="wise" >WISE</option>
+
+            </select>
+
+
+
+        {/* <input type="text" name="category" onChange={handleChange} value={formData.category} /> */}
+        
+        <br/>
         <input className="submitButton" type="submit" />
       </form>
     </div>

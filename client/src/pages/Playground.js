@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
-const Sandbox = () => {
+const Playground = () => {
   const url = `http://localhost:3001/bookmarks/category/sandbox`;
   const [bookmarks, setBookmarks] = useState("");
 
@@ -25,7 +25,7 @@ const Sandbox = () => {
     return (
       <div className="container">
         <h2>
-            Sandbox
+           Playground
         </h2>
         <div className="siteList">
           {bookmarks?.map((bookmark, index) => (
@@ -51,4 +51,4 @@ const Sandbox = () => {
   );
 };
 
-export default Sandbox;
+export default Playground;
