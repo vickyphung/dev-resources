@@ -2,22 +2,26 @@ import React from "react";
 import { useState, useEffect } from "react";
 
 const Dsalgo = () => {
-  const url = `http://localhost:3001/bookmarks/category/data%20structures%20and%20algorithms`;
   const [bookmarks, setBookmarks] = useState("");
 
-  const getBookmarks = async () => {
-    try {
-      const response = await fetch(url);
-      const data = await response.json();
-      setBookmarks(data.bookmarks);
-      console.log(response);
-      console.log(data);
-    } catch (e) {
-      console.error(e);
-    }
-  };
+  
  
   useEffect(() => {
+    const url = `http://localhost:3001/bookmarks/category/data%20structures%20and%20algorithms`;
+ 
+
+    const getBookmarks = async () => {
+      
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+        setBookmarks(data.bookmarks);
+        console.log(response);
+        console.log(data);
+      } catch (e) {
+        console.error(e);
+      }
+    };
     getBookmarks();
   }, []);
 

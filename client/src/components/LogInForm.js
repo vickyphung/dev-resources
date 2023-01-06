@@ -43,6 +43,8 @@ export default function LogInForm (props) {
             onChange={handleChange}
             required
           />
+          <br />
+
           <label htmlFor="password">Password:</label>
           <input
             type="password"
@@ -51,6 +53,8 @@ export default function LogInForm (props) {
             onChange={handleChange}
             required
           />
+          <br />
+
           <button type="submit">Log In</button>
         </form>
         <p className="error-message">{errorState}</p>

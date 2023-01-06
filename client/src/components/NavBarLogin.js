@@ -16,12 +16,12 @@ export default function NavBarLogin(props) {
 
       <div className="nav">
 
+      <Link to="/about">About/Contact</Link>
 
-      <Link to="/add">Add Bookmark</Link>
 
       <br />
-      <Link to="/">Home</Link>
-      <Link to="/about">About/Contact</Link>
+      {/* <Link to="/">Home</Link> */}
+      <Link to="/add">Add Bookmark</Link>
       <br />
       <Link to="/bookmarks">All Bookmarks</Link>
 
@@ -47,7 +47,7 @@ export default function NavBarLogin(props) {
         <Link to="/webdev">Web Development</Link>
         <Link to="/youtube">YouTube</Link>
 
-        <br /><Link to="/wise">Wise</Link>
+        <br /><Link to="/wise">WISE</Link>
 
 
       </div>

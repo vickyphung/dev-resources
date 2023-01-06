@@ -65,6 +65,8 @@ function App() {
                 <Route path="/other" element={<Other />} />
                 <Route path="/mongo" element={<Mongo />} />
                 <Route path="/youtube" element={<Youtube />} />
+              <Route path="/wise" element={<Wise />} />
+
               </Routes>
             </div>
           </div>
@@ -80,8 +82,8 @@ function App() {
             
             <Routes>
           <Route path="/auth" element={<Auth setUser={setUser} />} />
-          <Route path="/" element={<Bookmarks />} />
-          <Route path="/about" element={<AboutContact />} />
+          {/* <Route path="/" element={<Bookmarks />} /> */}
+          <Route path="/" element={<AboutContact />} />
 
               <Route path="/bookmarks" element={<Bookmarks />} />
               <Route path="/css" element={<Htmlcss />} />

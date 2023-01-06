@@ -8,10 +8,11 @@ export default function NavBar(props) {
       <div className="nav">
 
       {/* <Link to="/">All Bookmarks</Link> */}
+        <Link to="/">About/Contact</Link>
       <Link to="/auth">Sign Up/Log In </Link>
-        <Link to="/about">About/Contact</Link>
+
         <br />
-        <Link to="/bookmarks">All Bookmarks</Link>
+        {/* <Link to="/bookmarks">All Bookmarks</Link> */}
         <h4>Categories</h4>
         <Link to="/communities">Communities</Link>
         <Link to="/css">CSS</Link>

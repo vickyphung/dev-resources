@@ -1,14 +1,52 @@
-import React from 'react'
+import React from "react";
+import { useState, useEffect } from "react";
 
 const Wise = () => {
+  const url = `http://localhost:3001/bookmarks/category/wise`;
+  const [bookmarks, setBookmarks] = useState("");
+
+  const getBookmarks = async () => {
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+      setBookmarks(data.bookmarks);
+      console.log(response);
+      console.log(data);
+    } catch (e) {
+      console.error(e);
+    }
+  };
+ 
+  useEffect(() => {
+    getBookmarks();
+  }, []);
+
+  const loaded = () => {
+    return (
+      <div className="container">
+        <h2>WISE</h2>
+        <div className="siteList">
+          {bookmarks?.map((bookmark, index) => (
+            <div className="site">
+              <h3>{bookmark?.site}</h3>
+              <a href={bookmark?.url}>{bookmark?.url}</a>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  };
+
+  const loading = () => {
+    return <h2>Loading...</h2>;
+  };
+
   return (
     <div>
-        
-        
-         <h2>WISE</h2>         
-        
-         </div>
-  )
-}
+      {console.log(bookmarks)}
+      {bookmarks ? loaded() : loading()}
+    </div>
+  );
+};
 
-export default Wise
+export default Wise;
