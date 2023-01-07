@@ -4,14 +4,10 @@ import { useState, useEffect } from "react";
 const Dsalgo = () => {
   const [bookmarks, setBookmarks] = useState("");
 
-  
- 
   useEffect(() => {
     const url = `http://localhost:3001/bookmarks/category/data%20structures%20and%20algorithms`;
- 
 
     const getBookmarks = async () => {
-      
       try {
         const response = await fetch(url);
         const data = await response.json();

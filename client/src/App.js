@@ -4,7 +4,6 @@ import { useState } from "react";
 import { getUser } from "./utilities/users-service";
 import Auth from "./pages/Auth";
 import NavBar from "./components/NavBar";
-import AddBookmarkForm from "./components/AddBookmarkForm";
 import AddBookmark from "./pages/AddBookmark";
 import Home from "./pages/Home";
 import Bookmarks from "./pages/Bookmarks";
@@ -102,7 +101,7 @@ function App() {
               <Route path="/other" element={<Other />} />
               <Route path="/mongo" element={<Mongo />} />
               <Route path="/youtube" element={<Youtube />} />
-              <Route path="/wise" element={<Wise />} />
+              {/* <Route path="/wise" element={<Wise />} /> */}
             </Routes>
           </div>
         </>

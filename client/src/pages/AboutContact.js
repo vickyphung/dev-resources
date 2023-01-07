@@ -4,7 +4,7 @@ const AboutContact = () => {
   return (
     <div>
       <h2>About</h2>
-      <p>Resources for learning web development.</p>
+      <p>Resources to learn web development.</p>
       <p>HTML, CSS, JavaScript, and the MERN stack.</p>
       <p>Sign up or log in to add a bookmark.</p>
       <br />

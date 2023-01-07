@@ -10,7 +10,7 @@ const AddBookmarkForm = () => {
     category: ''
   })
 
-  const [errorState, setErrorState] = useState('')
+  // const [errorState, setErrorState] = useState('')
 
   // const handleSubmit = async (event) => {
   //   event.preventDefault();
@@ -54,13 +54,13 @@ const AddBookmarkForm = () => {
         <label htmlFor="category">Category:</label><br />
 
         <select className='searchDropdown' id="type" name="category" onChange={handleChange} value={formData.category}>
-              <option value="css" >CSS</option>
               <option value="design" >Design</option>
               <option value="data structures and algorithms" >Data Structures and Algorithms</option>
               <option value="free online courses" >Free Online Courses</option>
               <option value="git" >Git</option>
-              <option value="hosting" >Web Hosting</option>
-              <option value="html" >HTML</option>
+              <option value="hosting" >Hosting</option>
+              <option value="css" >HTML/CSS</option>
+              {/* <option value="html" >HTML</option> */}
               <option value="JavaScript" >JavaScript</option>
               <option value="mongo" >MongoDB</option>
               <option value="node" >Node</option>

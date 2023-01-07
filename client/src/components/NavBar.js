@@ -3,24 +3,21 @@ import "./styles.css";
 export default function NavBar(props) {
   return (
     <nav>
-
-
       <div className="nav">
-
-      {/* <Link to="/">All Bookmarks</Link> */}
+        {/* <Link to="/">All Bookmarks</Link> */}
         <Link to="/">About/Contact</Link>
-      <Link to="/auth">Sign Up/Log In </Link>
+        <Link to="/auth">Sign Up/Log In </Link>
 
         <br />
         {/* <Link to="/bookmarks">All Bookmarks</Link> */}
         <h4>Categories</h4>
         <Link to="/communities">Communities</Link>
-        <Link to="/css">CSS</Link>
         <Link to="/design">Design</Link>
         <Link to="/dsalgo">Data Structures & Algorithms</Link>
         <Link to="/freecourses">Free Online Courses</Link>
         <Link to="/git">Git</Link>
         <Link to="/hosting">Web Hosting</Link>
+        <Link to="/css">HTML/CSS</Link>
 
         <Link to="/js">JavaScript</Link>
         <Link to="/mongo">Mongo</Link>
@@ -33,16 +30,12 @@ export default function NavBar(props) {
         <Link to="/tools">Tools</Link>
         <Link to="/webdev">Web Development</Link>
         <Link to="/youtube">YouTube</Link>
-        <br />
-        <Link to="/wise">WISE</Link>
+        {/* <br />
+        <Link to="/wise">WISE</Link> */}
 
-{/* <br /><br /> */}
-{/* <h4>-</h4> */}
-
-
-
+        {/* <br /><br /> */}
+        {/* <h4>-</h4> */}
       </div>
-
     </nav>
   );
 }

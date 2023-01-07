@@ -2,10 +2,13 @@ import React from "react";
 import { useState, useEffect } from "react";
 
 const Git = () => {
-  const url = `http://localhost:3001/bookmarks/category/git`;
   const [bookmarks, setBookmarks] = useState("");
 
+  useEffect(() => {
+    
   const getBookmarks = async () => {
+  const url = `http://localhost:3001/bookmarks/category/git`;
+
     try {
       const response = await fetch(url);
       const data = await response.json();
@@ -17,7 +20,6 @@ const Git = () => {
     }
   };
  
-  useEffect(() => {
     getBookmarks();
   }, []);
 

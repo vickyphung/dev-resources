@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 
 const Bookmarks = () => {
 
-  const url = `http://localhost:3001/bookmarks`;
 
   //state to hold the coin data
   const [bookmarks, setBookmarks] = useState("");
@@ -15,6 +14,11 @@ const Bookmarks = () => {
 //     const data = await response.json();
 //     setBookmarksData(data);
 //   };
+
+
+  // useEffect to runs when component mounts
+  useEffect(() => {
+  const url = `http://localhost:3001/bookmarks`;
 
   const getBookmarks = async () => {
     try{
@@ -30,9 +34,6 @@ const Bookmarks = () => {
       console.error(e)
     }
   };
-
-  // useEffect to runs when component mounts
-  useEffect(() => {
     getBookmarks();
   }, []);
 

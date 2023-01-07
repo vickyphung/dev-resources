@@ -2,9 +2,12 @@ import React from "react";
 import { useState, useEffect } from "react";
 
 const Youtube = () => {
-  const url = `http://localhost:3001/bookmarks/category/youtube`;
   const [bookmarks, setBookmarks] = useState("");
 
+
+ 
+  useEffect(() => {
+  const url = `http://localhost:3001/bookmarks/category/youtube`;
   const getBookmarks = async () => {
     try {
       const response = await fetch(url);
@@ -16,8 +19,6 @@ const Youtube = () => {
       console.error(e);
     }
   };
- 
-  useEffect(() => {
     getBookmarks();
   }, []);
 

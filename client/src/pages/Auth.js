@@ -1,6 +1,6 @@
 import SignUpForm from "../components/SignUpForm"
 import LogInForm from "../components/LogInForm"
-import Logout from "../components/Logout"
+// import Logout from "../components/Logout"
 
 export default function Auth (props) {
   return (

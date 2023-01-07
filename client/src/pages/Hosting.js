@@ -2,22 +2,24 @@ import React from "react";
 import { useState, useEffect } from "react";
 
 const Hosting = () => {
-  const url = `http://localhost:3001/bookmarks/category/hosting`;
   const [bookmarks, setBookmarks] = useState("");
 
-  const getBookmarks = async () => {
-    try {
-      const response = await fetch(url);
-      const data = await response.json();
-      setBookmarks(data.bookmarks);
-      console.log(response);
-      console.log(data);
-    } catch (e) {
-      console.error(e);
-    }
-  };
+
 
   useEffect(() => {
+  const url = `http://localhost:3001/bookmarks/category/hosting`;
+
+    const getBookmarks = async () => {
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+        setBookmarks(data.bookmarks);
+        console.log(response);
+        console.log(data);
+      } catch (e) {
+        console.error(e);
+      }
+    };
     getBookmarks();
   }, []);
 

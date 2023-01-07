@@ -17,24 +17,22 @@ export default function NavBarLogin(props) {
       <div className="nav">
 
       <Link to="/about">About/Contact</Link>
-
-
-      <br />
-      {/* <Link to="/">Home</Link> */}
       <Link to="/add">Add Bookmark</Link>
-      <br />
-      <Link to="/bookmarks">All Bookmarks</Link>
+
+
+      {/* <Link to="/">Home</Link> */}
+      {/* <Link to="/bookmarks">All Bookmarks</Link> */}
 
         <h4>Categories</h4>
 
         {/* <Link to="/articles">Articles</Link> */}
         <Link to="/communities">Communities</Link>
-        <Link to="/css">CSS</Link>
         <Link to="/design">Design</Link>
         <Link to="/dsalgo">Data Structures & Algorithms</Link>
         <Link to="/freecourses">Free Online Courses</Link>
         <Link to="/git">Git</Link>
         <Link to="/hosting">Hosting</Link>
+        <Link to="/css">HTML/CSS</Link>
         <Link to="/js">JavaScript</Link>
         <Link to="/mongo">Mongo</Link>
         <Link to="/node">Node</Link>

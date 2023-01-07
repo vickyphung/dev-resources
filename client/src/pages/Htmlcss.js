@@ -2,9 +2,11 @@ import React from "react";
 import { useState, useEffect } from "react";
 
 const Htmlcss = () => {
-  const url = `http://localhost:3001/bookmarks/category/css`;
   const [bookmarks, setBookmarks] = useState("");
 
+
+  useEffect(() => {
+  const url = `http://localhost:3001/bookmarks/category/css`;
   const getBookmarks = async () => {
     try {
       const response = await fetch(url);
@@ -17,7 +19,6 @@ const Htmlcss = () => {
     }
   };
  
-  useEffect(() => {
     getBookmarks();
   }, []);
 

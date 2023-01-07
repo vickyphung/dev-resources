@@ -2,8 +2,11 @@ import React from "react";
 import { useState, useEffect } from "react";
 
 const Playground = () => {
-  const url = `http://localhost:3001/bookmarks/category/sandbox`;
   const [bookmarks, setBookmarks] = useState("");
+
+ 
+  useEffect(() => {
+  const url = `http://localhost:3001/bookmarks/category/sandbox`;
 
   const getBookmarks = async () => {
     try {
@@ -16,8 +19,6 @@ const Playground = () => {
       console.error(e);
     }
   };
- 
-  useEffect(() => {
     getBookmarks();
   }, []);
 

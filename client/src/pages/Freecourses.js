@@ -2,8 +2,11 @@ import React from "react";
 import { useState, useEffect } from "react";
 
 const Freecourses = () => {
-  const url = `http://localhost:3001/bookmarks/category/free%20online%20courses`;
   const [bookmarks, setBookmarks] = useState("");
+
+ 
+  useEffect(() => {
+  const url = `http://localhost:3001/bookmarks/category/free%20online%20courses`;
 
   const getBookmarks = async () => {
     try {
@@ -16,8 +19,6 @@ const Freecourses = () => {
       console.error(e);
     }
   };
- 
-  useEffect(() => {
     getBookmarks();
   }, []);
 

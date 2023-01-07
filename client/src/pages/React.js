@@ -2,9 +2,12 @@ import React from "react";
 import { useState, useEffect } from "react";
 
 const Reactjs = () => {
-  const url = `http://localhost:3001/bookmarks/category/react`;
   const [bookmarks, setBookmarks] = useState("");
 
+
+ 
+  useEffect(() => {
+  const url = `http://localhost:3001/bookmarks/category/react`;
   const getBookmarks = async () => {
     try {
       const response = await fetch(url);
@@ -16,8 +19,6 @@ const Reactjs = () => {
       console.error(e);
     }
   };
- 
-  useEffect(() => {
     getBookmarks();
   }, []);
 

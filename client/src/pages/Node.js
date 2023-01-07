@@ -2,9 +2,12 @@ import React from "react";
 import { useState, useEffect } from "react";
 
 const Node = () => {
-  const url = `http://localhost:3001/bookmarks/category/node`;
   const [bookmarks, setBookmarks] = useState("");
 
+
+ 
+  useEffect(() => {
+  const url = `http://localhost:3001/bookmarks/category/node`;
   const getBookmarks = async () => {
     try {
       const response = await fetch(url);
@@ -16,8 +19,7 @@ const Node = () => {
       console.error(e);
     }
   };
- 
-  useEffect(() => {
+
     getBookmarks();
   }, []);
 

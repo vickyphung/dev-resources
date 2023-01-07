@@ -2,8 +2,10 @@ import React from "react";
 import { useState, useEffect } from "react";
 
 const Mongo = () => {
-  const url = `http://localhost:3001/bookmarks/category/mongo`;
   const [bookmarks, setBookmarks] = useState("");
+
+  useEffect(() => {
+  const url = `http://localhost:3001/bookmarks/category/mongo`;
 
   const getBookmarks = async () => {
     try {
@@ -17,7 +19,6 @@ const Mongo = () => {
     }
   };
  
-  useEffect(() => {
     getBookmarks();
   }, []);
 
