@@ -10,7 +10,7 @@ export default function SignUpForm(props) {
     password: "",
     confirm: "",
   });
-
+// eslint-disable-next-line
   const [disable, setDisable] = useState(
     formData.password !== formData.confirm
   );
